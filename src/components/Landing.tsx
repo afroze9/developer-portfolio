@@ -1,8 +1,9 @@
 import { useState } from 'react';
 import Switch from 'react-switch';
-import { Icon, addCollection } from '@iconify/react';
+import { Icon } from '@iconify/react';
 import styled from 'styled-components';
 import { lightTheme, darkTheme, ITheme } from '../themes';
+import { CenterDiv, H1 } from './StyledComponents';
 
 const Container = styled.div`
   background-color: ${props => props.theme.background};
@@ -15,15 +16,6 @@ const Container = styled.div`
   justify-content: center;
 `;
 
-const H1 = styled.h1`
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  color: ${props => props.theme.textColor};
-`;
-
-const CenterDiv = styled.div`
-  margin-left:auto;
-  margin-right:auto;
-`;
 
 type ILandingProps = {
   setTheme: React.Dispatch<React.SetStateAction<ITheme>>
