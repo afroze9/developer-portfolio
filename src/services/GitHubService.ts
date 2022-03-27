@@ -17,8 +17,8 @@ const filterReposeByOwner = (repos: IRepository[], owner: string) => {
 
 const getStarredRepos = async (user: string, owner: string): Promise<IRepository[]> => {
   try {
-    let response = await fetch(`https://api.github.com/users/${user}/starred`);
-    let repos = await response.json() as IRepository[];
+    const response = await fetch(`https://api.github.com/users/${user}/starred`);
+    const repos = await response.json() as IRepository[];
     return filterReposeByOwner(repos, owner);
   } catch (e) {
     console.log(e);

@@ -36,7 +36,7 @@ const Projects = () => {
   useEffect(() => {
     getStarredRepos('afroze9', 'afroze9')
       .then(repos => {
-        let mappedProjects = repos.map(r => ({
+        const mappedProjects = repos.map(r => ({
           title: r.name,
           description: r.description,
           link: r.git_url
