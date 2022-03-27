@@ -13,20 +13,18 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "5.0.0",
-    "typescript": "^4.6.3",
-    "web-vitals": "^2.1.4"
+    "typescript": "^4.6.3"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+    "eject": "react-scripts eject",
+    "pretty": "npx prettier ./src/* --write --config ./config/.prettierrc.json --ignore-path ./config/.prettierignore",
+    "lintcode":"npx eslint src/* -c ./config/.eslintrc.json --ignore-path ./config/.eslintignore",
+    "lintcss":"npx stylelint src/*.css --config ./config/.stylelintrc.json",
+    "lint": "npm run lintcode && npm run lintcss",
+    "prebuild": "npm run lint && npm run pretty"
   },
   "browserslist": {
     "production": [
@@ -39,5 +37,16 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.16.0",
+    "@typescript-eslint/parser": "^5.16.0",
+    "eslint": "^8.12.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-react": "^7.29.4",
+    "prettier": "2.6.1",
+    "stylelint": "^14.6.1",
+    "stylelint-config-prettier": "^9.0.3",
+    "stylelint-config-standard": "^25.0.0"
   }
 }
