@@ -20,8 +20,8 @@ const App = () => {
     <ThemeProvider theme={theme}>
       <div>
         <Landing setTheme={setTheme} titles={titles} />
-        {/* <About />
-        <Projects / >
+        <About />
+        {/* <Projects / >
         <Skills />
         <Experience />
         <Footer /> */}

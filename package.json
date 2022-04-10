@@ -44,6 +44,7 @@
     ]
   },
   "devDependencies": {
+    "@iconify/icons-logos": "^1.2.4",
     "@iconify/react": "^3.2.0",
     "@types/styled-components": "^5.1.25",
     "@typescript-eslint/eslint-plugin": "^5.16.0",
