@@ -15,7 +15,7 @@ const About = () => {
   return (
     <section id="about">
       <div className="col-md-12">
-        <h1>
+        <h1 className="section-title">
           <span>About Me</span>
         </h1>
         <div className="row center-aligner mx-auto mb-5">

@@ -20,3 +20,15 @@ code {
 .full-height {
   height: 100%;
 }
+
+.section-title {
+	padding-top: 5%;
+	font: 18px/24px 'opensans-bold', sans-serif;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	text-align: center;
+}
+
+.pb-5p {
+  padding-bottom: 5%;
+}
