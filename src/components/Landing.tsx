@@ -1,82 +1,73 @@
 import { useState } from 'react';
 import Switch from 'react-switch';
 import { Icon } from '@iconify/react';
-import styled from 'styled-components';
 import { lightTheme, darkTheme, ITheme } from '../themes';
-import { CenterDiv, H1 } from './StyledComponents';
+import { H1 } from './StyledComponents';
+import styled from 'styled-components';
+import './Landing.component.css';
+import Typewriter from 'typewriter-effect';
 
-const Container = styled.div`
+const Header = styled.header`
   background-color: ${props => props.theme.background};
   color: ${props => props.theme.textColor};
-  height: 100vh;
-  width: 100vw;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 `;
 
-
 type ILandingProps = {
-  setTheme: React.Dispatch<React.SetStateAction<ITheme>>
+  setTheme: React.Dispatch<React.SetStateAction<ITheme>>;
+  titles: string[];
 }
 
-const Landing = ({ setTheme }: ILandingProps) => {
+const Landing = ({ setTheme, titles }: ILandingProps) => {
   const [isDark, setIsDark] = useState(false);
+
+  const titleProvider: string[] = titles.map(t => t.toUpperCase());
 
   const onThemeSwitchChanged = (checked: boolean, event: MouseEvent | React.SyntheticEvent<MouseEvent | KeyboardEvent, Event>, id: string): void => {
     setIsDark(checked);
     setTheme(checked ? darkTheme : lightTheme);
   }
 
-  return <Container>
-    <CenterDiv>
-      <Icon icon="bx:code-block" style={{
-        display: 'block',
-        fontSize: 20,
-        textAlign: 'center',
-        width: 150,
-        height: 150
-      }} />
-    </CenterDiv>
-    <H1>Afroze Amjad</H1>
-    <CenterDiv>
-      <Switch
-        checked={isDark}
-        onChange={onThemeSwitchChanged}
-        offColor="#baaa80"
-        onColor="#353535"
-        width={90}
-        height={40}
-        uncheckedIcon={
-          <Icon
-            icon="emojione:full-moon-face"
-            style={{
-              display: 'block',
-              height: '100%',
-              fontSize: 25,
-              marginLeft: "20px",
-              textAlign: 'end',
-              color: '#353239',
+  return <Header>
+    <div className="row center-aligner full-height">
+      <div className="col-md-12">
+        <div>
+          <Icon icon="bx:code-block" className="header-icon" />
+          <H1 className="mb-0">Afroze Amjad</H1>
+          <Typewriter
+            options={{
+              strings: titleProvider,
+              autoStart: true,
+              loop: true,
+              delay: 50,
+              wrapperClassName: 'typewriter-wrapper',
+              cursorClassName: 'typewriter-wrapper',
+              cursor: '_',
             }}
           />
-        }
-        checkedIcon={
-          <Icon
-            icon="emojione:sun-with-face"
-            style={{
-              display: 'block',
-              height: '100%',
-              fontSize: 25,
-              textAlign: 'end',
-              marginLeft: "10px",
-              color: '#353239',
-            }}
-          />
-        }
-      ></Switch>
-    </CenterDiv>
-  </Container>
+          <Switch
+            checked={isDark}
+            onChange={onThemeSwitchChanged}
+            offColor="#baaa80"
+            onColor="#353535"
+            width={90}
+            height={40}
+            uncheckedIcon={
+              <Icon
+                icon="emojione:full-moon-face"
+                className="toggle-icon ml-20"
+              />
+            }
+            checkedIcon={
+              <Icon
+                icon="emojione:sun-with-face"
+                className="toggle-icon ml-10"
+              />
+            }
+          ></Switch>
+        </div>
+      </div>
+    </div>
+  </Header>
 }
 
 export default Landing;
