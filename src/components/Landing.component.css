@@ -39,3 +39,15 @@ header {
 .typewriter-wrapper {
   font-size: 25px;
 }
+
+.sun {
+  display:inline-block;
+  position: absolute;
+  width: 15vh;
+  height: 15vh;
+  border-radius: 50%;
+  background-color: #e9d5a1;
+  z-index: 9;
+  top:5vw;
+  right:5vw;
+}

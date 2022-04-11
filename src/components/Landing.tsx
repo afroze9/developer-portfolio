@@ -28,6 +28,7 @@ const Landing = ({ setTheme, titles }: ILandingProps) => {
   }
 
   return <Header>
+    <div className="sun"></div>
     <div className="row center-aligner full-height">
       <div className="col-md-12">
         <div>
@@ -47,8 +48,8 @@ const Landing = ({ setTheme, titles }: ILandingProps) => {
           <Switch
             checked={isDark}
             onChange={onThemeSwitchChanged}
-            offColor="#baaa80"
-            onColor="#353535"
+            offColor="#11485E"
+            onColor="353535"
             width={90}
             height={40}
             uncheckedIcon={
