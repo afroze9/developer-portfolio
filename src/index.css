@@ -23,7 +23,7 @@ code {
 
 .section-title {
 	padding-top: 5%;
-	font: 18px/24px 'opensans-bold', sans-serif;
+	font: 18px/24px opensans-bold, sans-serif;
 	text-transform: uppercase;
 	letter-spacing: 3px;
 	text-align: center;
