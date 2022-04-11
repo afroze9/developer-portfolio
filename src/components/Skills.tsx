@@ -1,9 +1,10 @@
 import './Skills.component.scss';
+import { Icon } from '@iconify/react';
 
 type ISkill = {
   name: string,
   level: string,
-  class: string
+  iconName: string
 }
 
 type ISkillsProps = {
@@ -18,9 +19,10 @@ const Skill = ({ skill }: ISkillProps) => {
   return <li className="list-inline-item mx-3">
     <span>
       <div className="text-center skills-tile">
-        <i className={skill.class} style={{ fontSize: '220%' }}>
-        </i>
-        <p className="text-center" style={{ fontSize: '75%' }}>
+        <Icon icon={skill.iconName}
+          style={{ fontSize: "250%", margin: "9% 5% 0 5%", color: "#0078D4" }}
+        />
+        <p className="text-center" style={{ fontSize: '50%', marginTop: 6 }}>
           {skill.name}
         </p>
       </div>

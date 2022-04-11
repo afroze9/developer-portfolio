@@ -32,9 +32,6 @@ const About = () => {
                 <Icon icon="vscode-icons:file-type-azurepipelines"
                   style={{ fontSize: "250%", margin: "9% 5% 0 5%", color: "#0078D4" }}
                 />
-                {/* <Icon icon="simple-icons:microsoftsharepoint"
-                  style={{ fontSize: "200%", margin: "9% 5% 0 5%", color: "#036C70" }}
-                /> */}
               </span>
             </div>
           </div>
