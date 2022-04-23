@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import Switch from 'react-switch';
 import { Icon } from '@iconify/react';
-import { lightTheme, darkTheme, ITheme } from '../themes';
-import { H1 } from './StyledComponents';
+import { lightTheme, darkTheme, ITheme } from '../../themes';
+import { H1 } from '../StyledComponents';
 import styled from 'styled-components';
 import './Landing.component.css';
 import Typewriter from 'typewriter-effect';

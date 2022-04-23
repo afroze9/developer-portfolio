@@ -3,6 +3,7 @@ import Badge from 'react-bootstrap/Badge';
 import { Icon } from "@iconify/react";
 import 'react-vertical-timeline-component/style.min.css';
 import './Experience.component.css';
+import EmptySection from "../EmptySection";
 
 type IExperienceItem = {
   company: string;
@@ -17,13 +18,9 @@ export interface IExperienceProps {
   experiences: IExperienceItem[];
 }
 
-const EmptyTab = () => {
-  return <></>;
-}
-
 const Experience = ({ experiences }: IExperienceProps) => {
   if (experiences.length === 0) {
-    return <EmptyTab />;
+    return <EmptySection />;
   }
 
   const getMainTechMap = (mainTech: string[]) =>

@@ -1,9 +1,9 @@
-import Landing from "./components/Landing";
-import About from "./components/About";
+import Landing from "./components/Landing/Landing";
+import About from "./components/About/About";
 //import Projects from "./components/Projects";
-import Skills from "./components/Skills";
-import Experience from "./components/Experience";
-// import Footer from "./components/Footer";
+import Skills from "./components/Skills/Skills";
+import Experience from "./components/Experience/Experience";
+import Footer from "./components/Footer/Footer";
 import { ThemeProvider } from "styled-components";
 import { useState } from "react";
 import { lightTheme, ITheme } from "./themes";
@@ -82,6 +82,15 @@ const App = () => {
       icon: "mdi:microsoft-sharepoint"
     }
   ])
+  const [socials] = useState([{
+    name: 'github',
+    url: 'https://github.com/afroze9',
+    icon: 'akar-icons:github-fill'
+  }, {
+    name: 'linkedin',
+    url: 'https://www.linkedin.com/in/afroze-amjad/',
+    icon: 'akar-icons:linkedin-box-fill'
+  }])
 
   return (
     <ThemeProvider theme={theme}>
@@ -91,7 +100,7 @@ const App = () => {
         {/* <Projects / >*/}
         <Skills skills={skills} />
         <Experience experiences={experiences} />
-        {/*<Footer /> */}
+        <Footer socials={socials} />
       </div>
     </ThemeProvider>
   );

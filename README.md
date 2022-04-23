@@ -13,7 +13,8 @@ The site is hosted [here](https://afroze.website)
 # TODO
 - [x] About Me Section
 - [ ] Projects Section
-- [ ] Skills Section
-- [ ] Experience Section
-- [ ] Footer
+- [x] Skills Section
+- [x] Experience Section
+- [x] Footer
 - [ ] Add i18n
+- [ ] Add theme support to sections
