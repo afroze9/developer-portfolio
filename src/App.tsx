@@ -51,7 +51,6 @@ const App = () => {
       level: "90"
     }
   ]);
-
   const [experiences] = useState([
     {
       company: 'CureMD',

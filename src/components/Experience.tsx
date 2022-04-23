@@ -33,7 +33,7 @@ const Experience = ({ experiences }: IExperienceProps) => {
     technologies.map((tech, i) => <Badge pill className="experience-badge mr-2 mb-2" key={i}>{tech}</Badge>)
 
   const getExperienceMap = () => {
-    let work = experiences.map((exp, i) => {
+    const work = experiences.map((exp, i) => {
       const techMap = getTechnologiesMap(exp.technologies);
       const mainTechMap = getMainTechMap(exp.mainTech);
 

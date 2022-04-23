@@ -2,15 +2,6 @@ import { Icon } from '@iconify/react';
 import styled from 'styled-components';
 import './About.component.css';
 
-const AboutContainer = styled.div`
-  background-color: ${props => props.theme.secondary};
-  color: ${props => props.theme.textColor};
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-`;
-
 const About = () => {
   return (
     <section id="about">
