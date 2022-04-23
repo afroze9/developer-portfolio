@@ -1,5 +1,4 @@
 import { Icon } from '@iconify/react';
-import EmptySection from '../EmptySection';
 import './Footer.component.css';
 
 type Social = {
@@ -12,10 +11,6 @@ export interface IFooterProps {
 }
 
 const Footer = ({ socials }: IFooterProps) => {
-  if (socials.length === 0) {
-    return <EmptySection />
-  }
-
   const getSocialsMap = (socials: Social[]) => socials.map(social =>
     <span key={social.name} className="m-4">
       <a href={social.url} target="_blank" rel="noopener noreferrer">
@@ -26,7 +21,7 @@ const Footer = ({ socials }: IFooterProps) => {
   return (
     <footer>
       <div className="col-md-12">
-        <div className="social-links">{getSocialsMap(socials)}</div>
+        <div className="social-links">{socials.length !== 0 && getSocialsMap(socials)}</div>
         <div className="copyright py-4 text-center">
           <div className="container">
             <small>
