@@ -8,7 +8,7 @@ import './Landing.component.css';
 import Typewriter from 'typewriter-effect';
 
 const Header = styled.header`
-  background-color: ${props => props.theme.background};
+  background-color: ${props => props.theme.primary};
   color: ${props => props.theme.textColor};
 `;
 

@@ -1,6 +1,8 @@
 export interface IPortfolioTheme {
-  background: string;
-  foreground: string;
-  textColor: string;
+  primary: string;
   secondary: string;
+  tertiary: string;
+  ternary: string;
+  textColor: string;
+  ternaryBorder: string;
 }

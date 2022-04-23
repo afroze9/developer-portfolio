@@ -4,9 +4,13 @@ import About from "./components/About/About";
 import Skills from "./components/Skills/Skills";
 import Experience from "./components/Experience/Experience";
 import Footer from "./components/Footer/Footer";
-import { ThemeProvider } from "styled-components";
+import styled, { ThemeProvider } from "styled-components";
 import { useState } from "react";
 import { lightTheme, ITheme } from "./themes";
+
+const AppDiv = styled.div`
+  background-color: ${props => props.theme.secondary};
+`;
 
 const App = () => {
   const [theme, setTheme] = useState<ITheme>(lightTheme);
@@ -94,14 +98,14 @@ const App = () => {
 
   return (
     <ThemeProvider theme={theme}>
-      <div>
+      <AppDiv>
         <Landing setTheme={setTheme} titles={titles} />
         <About />
         {/* <Projects / >*/}
         <Skills skills={skills} />
         <Experience experiences={experiences} />
         <Footer socials={socials} />
-      </div>
+      </AppDiv>
     </ThemeProvider>
   );
 };
