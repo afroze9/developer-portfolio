@@ -1,5 +1,7 @@
 export interface IPortfolioTheme {
-  primary: string;
+  primaryBackground: string;
+  primaryAccent: string;
+  primaryAccentText: string;
   secondary: string;
   tertiary: string;
   ternary: string;

@@ -7,7 +7,7 @@ const Section = styled.section`
 `;
 
 const Polaroid = styled.div`
-  background-color: ${props => props.theme.tertiary};
+  background-color: ${props => props.theme.ternary};
 	display: inline-block;
 	margin: 55px 75px 30px;
 	padding: 15px 15px 30px;
@@ -37,7 +37,7 @@ const CardHeader = styled.div`
 `;
 
 const CardBody = styled.div`
-  background-color: ${props => props.theme.tertiary};
+  background-color: ${props => props.theme.ternary};
   color: ${props => props.theme.textColor};
 `;
 
